@@ -1,0 +1,24 @@
+.search {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.search:hover {
+    border-color: #646cff;
+}
+
+.search__icon {
+    width: 16px;   
+}
+
+input.search__input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
