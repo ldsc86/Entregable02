@@ -56,22 +56,25 @@ function App() {
     <div className='container'>
       {/* Video de fondo */}
       <video autoPlay loop muted className='background-video'>
-        <source src="/src/assets/background.mp4" type="video/mp4" />
+        <source src="/background.mp4" type="video/mp4" />
       </video>
 
       <div className='card'>
-      {/* Buscador por pais */}
-      <div className='card__header'>
-      <Search setCity={setCity} setCoords={setCoords} />
-      <LocationButton setCoords={setCoords} setError={setError} />
-      </div>
-      <div className='card__body'>
-        {error && <p className='error'>
-          <AlertCircle className='error__icon' />{error}
+        {/* Logo */}
+        <img src="/logo.png" alt="Logo" className="card__logo" />
+
+        {/* Buscador por pais */}
+        <div className='card__header'>
+          <Search setCity={setCity} setCoords={setCoords} />
+          <LocationButton setCoords={setCoords} setError={setError} />
+        </div>
+        <div className='card__body'>
+          {error && <p className='error'>
+            <AlertCircle className='error__icon' />{error}
           </p>}
-      
-        {/* Informacion del estado del clima */}
-        {weather && <WeatherInfo weather={weather} />}
+        
+          {/* Informacion del estado del clima */}
+          {weather && <WeatherInfo weather={weather} />}
         </div>
       </div>
     </div>
