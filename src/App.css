@@ -37,6 +37,7 @@
     margin: 0 auto 20px; 
     max-width: 100px; 
     height: auto; 
+    filter: brightness(10);
 }
 
 .error {
